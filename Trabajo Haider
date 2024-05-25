@@ -1,0 +1,30 @@
+using System;
+
+class JuegoSumaMovimiento
+{
+    static void Main()
+    {
+        Console.WriteLine("Ingrese el tamaño del tablero (N):");
+        int N = int.Parse(Console.ReadLine());
+        int[,] tablero = new int[N, N];
+        int puntaje = 0;
+        int posX = 0, posY = 0;
+
+        // Inicialización del tablero
+        Random random = new Random();
+        for (int i = 0; i < N; i++)
+        {
+            for (int j = 0; j < N; j++)
+            {
+                if (i == 0 && j == 0)
+                {
+                    tablero[i, j] = 0;
+                }
+                else
+                {
+                    tablero[i, j] = random.Next(1, 10);
+                }
+            }
+   }
+
+
